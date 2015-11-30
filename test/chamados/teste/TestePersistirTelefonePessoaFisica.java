@@ -60,8 +60,8 @@ public class TestePersistirTelefonePessoaFisica {
             ClientePessoaFisica pf = em.find(ClientePessoaFisica.class, 2);
             Telefone t = new Telefone();
             t.setDdd("54");
-            t.setNumero("99987856");
-            t.setTipo("comercial");
+            t.setNumero("9998-7856");
+            t.setTipo("residencial");
             t.setDescricao("somente depois das 19:00");
             pf.adicionarTelefone(t);
             em.getTransaction().begin();

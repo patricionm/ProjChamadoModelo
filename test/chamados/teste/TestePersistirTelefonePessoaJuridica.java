@@ -60,7 +60,7 @@ public class TestePersistirTelefonePessoaJuridica {
             Telefone t = new Telefone();
             t.setDdd("54");
             t.setNumero("3313-6789");
-            t.setTipo("comercial");
+            t.setTipo("Comercial");
             t.setDescricao("somente até as 18:00");
             pj.adicionarTelefone(t);
             em.getTransaction().begin();

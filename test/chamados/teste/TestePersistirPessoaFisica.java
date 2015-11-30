@@ -60,6 +60,7 @@ public class TestePersistirPessoaFisica {
             ClientePessoaFisica pf = new ClientePessoaFisica();
             pf.setCidade(em.find(Cidade.class, 1));
             pf.setNome("Beto Albuquerque");
+            pf.setTipo("F");
             pf.setEndereco("Rua L, 15, Centro");
             pf.setDataCadastro(Calendar.getInstance());
             pf.setCategoria("com contrato");

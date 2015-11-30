@@ -7,9 +7,7 @@ package chamados.teste;
  */
 
 import chamados.modelo.Chamado;
-import chamados.modelo.Cidade;
 import chamados.modelo.Cliente;
-import chamados.modelo.ClientePessoaFisica;
 import chamados.modelo.Tecnico;
 import chamados.modelo.Usuario;
 import java.util.Calendar;
@@ -62,8 +60,8 @@ public class TestePersistirChamado {
             // Aqui vai o teste
             // recupera uma cidade
             Chamado c = new Chamado();
-            c.setTecnico(em.find(Tecnico.class, 2));
-            c.setUsuario(em.find(Usuario.class, 2));
+            c.setTecnico(em.find(Tecnico.class, 1));
+            c.setUsuario(em.find(Usuario.class, 1));
             c.setCliente(em.find(Cliente.class, 2));
             c.setDescricao("Problemas no servidor");
             c.setDtAbertura(Calendar.getInstance());

@@ -59,7 +59,8 @@ public class TestePersistirPessoaJuridica {
             // recupera uma cidade
             ClientePessoaJuridica pj = new ClientePessoaJuridica();
             pj.setCidade(em.find(Cidade.class, 1));
-            pj.setCategoria("com contrato");
+            pj.setCategoria("C/ contrato");
+            pj.setTipo("J");
             pj.setCnpj("48.650.616/0001-34");
             pj.setDataCadastro(Calendar.getInstance());
             pj.setEmail("Empresa_a@a.com");

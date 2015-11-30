@@ -54,7 +54,7 @@ public abstract class Cliente implements Serializable{
     @Column(name = "endereco", length = 50, nullable = false)
     private String endereco;
     
-    @Email(message = "Inofrme um email válido")
+    @Email(message = "Informe um email válido")
     @NotBlank(message = "O email deve ser informado")
     @Length(max = 50, message = "O email não deve ter mais de {max} caracteres")
     @Column(name = "email", length = 50, nullable = false)
@@ -65,7 +65,12 @@ public abstract class Cliente implements Serializable{
     @Column(name = "categoria", length = 30, nullable = false)
     private String categoria;
     
-    @NotBlank(message = "A situação deve ser informado")
+    @NotBlank(message = "O tipo deve ser informado")
+    @Length(max = 1, message = "O tipo não deve ter mais de {max} caracteres")
+    @Column(name = "tipo", length = 1, nullable = false)
+    private String tipo;
+    
+    @NotBlank(message = "A situação deve ser informada")
     @Length(max = 9, message = "A situação não deve ter mais de {max} caracteres")
     @Column(name = "situacao", length = 9, nullable = false)
     private String situacao;
@@ -152,6 +157,15 @@ public abstract class Cliente implements Serializable{
     public void setTelefones(List<Telefone> telefones) {
         this.telefones = telefones;
     }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+    
     
     
     @Override
